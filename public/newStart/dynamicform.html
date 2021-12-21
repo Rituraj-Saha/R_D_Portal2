@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DynamicForm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5a040b8d6a.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 80%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close2 {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close2:hover,
+        .close2:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+        }
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <label class="logo"><img src="/images/Both.png" alt="" style="max-width: 150px;"></label>
+        <ul>
+            <li><a id="log_out" href="login.html">log out</a></li>
+            <li><a href="https://www.nit.ac.in/" target="_blank">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section>
+
+        <main>
+
+            <button id="addBtn" class="btn waves-effect waves-light" style="margin-left: 0px;">add</button>
+            <form style="margin-top: 25px;">
+                <label for="formname">Name of the Form:</label><br>
+                <input type="text" id="form_name" name="form_name"><br>
+                <div id="added" class="added"></div>
+                <button id="submitBtn" class="btn waves-effect waves-light" style="margin-left: 100px;">Submit</button>
+            </form>
+                <!-- The Modal -->
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                     <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h5>Add Field</h5>
+                        </div>
+                        <div class="modal-body">
+                            <!-- <p>Some text in the Modal Body</p> -->
+                            <label for="fieldname">Name of the Field:</label><br>
+                            <input type="text" id="fieldnametxt" name="fieldname"><br>
+                            <label for="fieldtype">Type of the Field:</label><br>
+                            <!-- <input type="text" id="dept" name="dept"><br> -->
+                            <select  id="type_of_field" name="dept" style="display: inline;font-size: small;">
+                                <option value="text">text</option>
+                                <option value="dropdown">dropdown</option>
+                                <option value="document upload">document upload</option>
+                            </select><br>
+                            <!-- <p>Some other text...</p> -->
+                        </div>
+                        <button id="addBtnmodel" class="btn waves-effect waves-light" style="margin-left: 0px;">add</button>
+                        <!-- <div class="modal-footer">
+                            <h3>Modal Footer</h3>
+                        </div> -->
+                    </div>    
+
+                </div>
+
+
+                <div id="myModal2" class="modal">
+                    <!-- Modal content -->
+                   <div class="modal-content">
+                       <div class="modal-header">
+                           <span class="close2">&times;</span>
+                           <h5>Add values</h5>
+                       </div>
+                       <div class="modal-body">
+                           <!-- <p>Some text in the Modal Body</p> -->
+                           <label for="options_of_dropdown">Options:</label><br>
+                           <input type="text" id="option_give" name="options"><br>
+                       </div>
+                       <button id="addBtnmodel2" class="btn waves-effect waves-light" style="margin-left: 0px;">add</button>
+                       <!-- <div class="modal-footer">
+                           <h3>Modal Footer</h3>
+                       </div> -->
+                   </div>    
+
+               </div>
+
+
+            
+
+
+        </main>
+    </section>
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCe-urmqcMQL8hoFxJKXRf4E-4mMp3qGpc",
+    authDomain: "webapplication-2a95c.firebaseapp.com",
+    databaseURL: "https://webapplication-2a95c-default-rtdb.firebaseio.com",
+    projectId: "webapplication-2a95c",
+    storageBucket: "webapplication-2a95c.appspot.com",
+    messagingSenderId: "156223554218",
+    appId: "1:156223554218:web:142f0145a3fcf4634146d3",
+    measurementId: "G-LKLBPM68E5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+    <script src="./dynamicform.js"></script>
+</body>
+
+</html>

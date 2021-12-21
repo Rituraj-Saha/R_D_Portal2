@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faculty add new</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5a040b8d6a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <label class="logo"><img src="/images/Both.png" alt="" style="max-width: 150px;"></label>
+        <ul>
+            <li><a class="active" href="studentpatent.html">faculty publication</a></li>
+            <li><a href="studentviewtable.html">view table</a></li>
+            <li><a id="log_out" href="login.html">log out</a></li>
+            <li><a href="https://www.nit.ac.in/">Contact Us</a></li>
+        </ul>
+    </nav>
+     <section>
+    
+        <main>
+            <form>
+
+                <!-- <label for="userId">USER ID</label><br>
+                <input type="text" name="userId" id="userId"><br> -->
+
+                <label for="studentname">Name of Author:</label><br>
+                <input type="text" id="studentname" name="studentname"><br>
+
+                <label for="coauthername">Name of coauthers:</label><br>
+                <input type="text" id="coauthername" name="coauthername"><br>
+
+                <label for="dept">Department:</label><br>
+                <!-- <input type="text" id="dept" name="dept"><br> -->
+                <select  id="dept" name="dept" style="display: inline;font-size: small;">
+                    <option value="ADMIN">ADMIN</option>
+                    <option value="ACCOUNTS">ACCOUNTS</option>
+                    <option value="HR & TNP">HR & TNP</option>
+                    <option value="BA">BA</option>
+                    <option value="BS & HU">BS & HU</option>
+                    <option value="CSE">CSE</option>
+                    <option value="CE">CE</option>
+                    <option value="CSE">CA</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EE">EE</option>
+                    <option value="EIE">EIE</option>
+                    <option value="IT">IT</option>
+                    <option value="ME">ME</option>
+                </select><br>
+
+                <label for="orcid_id">Orcid id of the author:</label><br>
+                <input type="text" id="orcid_id" name="orcid_id"><br>
+
+                <label for="wos_id">WoS Research Id of the author:</label><br>
+                <input type="text" id="wos_id" name="wos_id"><br>
+
+                <label for="soopus_id">Soopus Id of the author:</label><br>
+                <input type="text" id="soopus_id" name="soopus_id"><br>
+
+                <label for="google_id">Google Scholar Id of the author:</label><br>
+                <input type="text" id="google_id" name="google_id"><br>
+
+                <label for="title">Title of Publication:</label><br>
+                <input type="text" id="title" name="title"><br>
+
+                <!-- <label for="types">Types of Publication:</label><br>
+                <input type="text" id="types" name="types"><br> -->
+                <label for="types">Types of Publication:</label><br>
+                <select  id="types" name="types" style="display: inline;font-size: small;">
+                    <option value="International Journal">International Journal</option>
+                    <option value="National Journal">National Journal</option>
+                    <option value="International Conference">International Conference</option>
+                    <option value="National Conference">National Conference</option>
+                    <option value="Book Chapter">Book Chapter</option>
+                    <option value="Book">Book</option>
+                </select><br>
+
+                <label for="name_of_journal">Name of the journal:</label><br>
+                <input type="text" id="name_of_journal" name="name_of_journal"><br>
+
+                <label for="month_of_publication">Month of publication:</label><br>
+                <input type="text" id="month_of_publication" name="month_of_publication"><br>
+
+                <label for="year_of_publication">Year of publication:</label><br>
+                <input type="text" id="year_of_publication" name="year_of_publication"><br>
+
+                <label for="topic_of_relevance">Topic of relevanve:</label><br>
+                <input type="text" id="topic_of_relevance" name="topic_of_relevance"><br>
+
+                <label for="impact_factor">Impact factor:</label><br>
+                <input type="text" id="impact_factor" name="impact_factor"><br>
+
+                <label for="Citation_index">Citation Index:</label><br>
+                <input type="text" id="Citation_index" name="Citation_index"><br>
+
+                <label for="h_index">h Index:</label><br>
+                <input type="text" id="h_index" name="h_index"><br>
+
+                <label for="indexed_in">Indexd in :</label><br>
+                <select id="indexed_in" name="indexed_in" style="display: inline;font-size: small;">
+                    <option value="Scoupus">Scoupus</option>
+                    <option value="Web Of Science">Web Of Science</option>
+                    <option value="Thomson Reuters">Thomson Reuters</option>
+                    <option value="UGC Affiliated">UGC Affiliated</option>
+                    
+                </select>
+                <!-- <input type="text" id="indexed_in" name="indexed_in"><br> -->
+
+                <label for="ISSN/ISSBN">ISSN/ISBN</label><br>
+                <input type="text" id="issn_issbn" name="issn_issbn"><br>
+                <!-- <select  id="issn_issbn" name="issn_issbn" style="display: inline;font-size: small;">
+                    <option value="ISSN">ISSN</option>
+                    <option value="ISSBN">ISSBN</option>
+                </select> -->
+
+                <label for="link">Link of the publication</label><br>
+                <input type="text" id="link" name="link"><br>
+
+                <label for="url">Url of the publication</label><br>
+                <input type="text" id="url" name="url"><br>
+
+                <label for="type_other_publications_index">Type of other publications & indexing </label><br>
+                <input type="text" id="type_other_publications_index" name="type_other_publications_index"><br>
+
+
+
+
+                <button id ="addBtn" class="btn waves-effect waves-light"   style="margin-left: 100px;">add</button>
+                
+
+                
+            </form>
+        </main>
+    </section>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCe-urmqcMQL8hoFxJKXRf4E-4mMp3qGpc",
+    authDomain: "webapplication-2a95c.firebaseapp.com",
+    databaseURL: "https://webapplication-2a95c-default-rtdb.firebaseio.com",
+    projectId: "webapplication-2a95c",
+    storageBucket: "webapplication-2a95c.appspot.com",
+    messagingSenderId: "156223554218",
+    appId: "1:156223554218:web:142f0145a3fcf4634146d3",
+    measurementId: "G-LKLBPM68E5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+       <script src="./facultyaddnew.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/newStart/style.css">
+    <script src="https://kit.fontawesome.com/5a040b8d6a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <label class="logo"><img src="/images/Both.png" alt="" style="max-width: 150px;"></label>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="/newStart/signup.html">SignUp</a></li>
+            <li><a href="/newStart/login.html">Login</a></li>
+            <li><a href="https://www.nit.ac.in/" target="_blank">Contact Us</a></li>
+            <li><a href="/newStart/adminlogin.html">Admin</a></li>
+        </ul>
+    </nav>
+    <section>
+        <main>
+            <form style="overflow-y: hidden; padding: 0px; overflow: hidden;border-radius: 50px;width: 860px;height: 460px;">
+
+                <div class="w3-content w3-section" style="max-width: 100%;">
+                    <img class="mySlides" src="images/acivementssingle.jpg" style="width: 860px;height: 460px;">
+                    <img class="mySlides" src="images/acivements2.jpg" style="width: 860px;height: 460px;">
+                    <!-- <img class="mySlides" src="img_chicago.jpg" style="width:100%"> -->
+                  </div>
+                  
+                  <script>
+                  var myIndex = 0;
+                  carousel();
+                  
+                  function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                      x[i].style.display = "none";  
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}    
+                    x[myIndex-1].style.display = "block";  
+                    setTimeout(carousel, 2000); // Change image every 2 seconds
+                  }
+                  </script>
+                  
+            </form>
+        </main>
+    </section>
+   
+   
+</body>
+</html>

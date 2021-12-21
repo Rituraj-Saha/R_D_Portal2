@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin_student_publication_view all</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5a040b8d6a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <label class="logo"><img src="/images/Both.png" alt="" style="max-width: 150px;"></label>
+        <ul>
+            <!-- <li><a href="studentpatent.html">student</a></li>
+            <li><a href="facultypatent.html">faculty</a></li> -->
+            <li><a id="log_out" href="login.html">Log Out</a></li>
+            <li><a id="admin_patent_selector" href="adminpublicationtypeselector.html">admin publication type</a></li>
+            <li><a href="https://www.nit.ac.in/">Contact Us</a></li>
+            <li><a href="#">Admin</a></li>
+        </ul>
+    </nav>
+     <section>
+    
+        <main>
+            <form style="width:1000px;height: 500px;overflow-y: scroll;padding: 5px;">
+
+                
+                <p id="welcomep" style="padding-left: 50px;">Welcome</p>
+                
+                <!-- <select  id="eid" name="eid" style="display: inline;font-size: small; margin-top: 50px;">
+                    <option value="eid">eid</option>
+                </select><br> -->
+
+                
+                    <div id="container" style="margin:0px;padding: 0px;">
+                    </div>
+                   
+                    
+                    <button onclick="exportTableToExcel('studenttable', 'members-data')"
+                    class="btn waves-effect waves-light"
+                    style="margin-left: 350px;">
+                        Download list</button>
+
+                      
+
+                <table id="studenttable" style="margin-top: 10px;">
+                    <tr>
+                        <th>Employee Id</th>
+                        <th>Employee Name</th>
+                        <th>Name of the Student Author</th>
+                        <th>Name of Student coauther</th>
+                        <th>Department of student</th>
+                        <th>Name Of Faculty Co Authors</th>
+                        <th>Title of Publication</th>
+                        <th>Types of Publication</th>
+                        <th>Name of the journal</th>
+                        <th>Month of publication</th>
+                        <th>Year of publication</th>
+                        <th>Topic of relevanve</th>
+                        <th>Impact factor</th>
+                        <th>Citation Index</th>
+                        <th>h Index</th>
+                        <th>Indexd in (Scop us/web of Science/Thomson)</th>
+                        <th>issn_issbn</th>
+                        <th>Url of the publication</th>
+                    </tr>
+                    <tr>
+                      
+                    </tr>
+                    
+
+                </table>
+
+            </form>
+        </main>
+    </section>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCe-urmqcMQL8hoFxJKXRf4E-4mMp3qGpc",
+    authDomain: "webapplication-2a95c.firebaseapp.com",
+    databaseURL: "https://webapplication-2a95c-default-rtdb.firebaseio.com",
+    projectId: "webapplication-2a95c",
+    storageBucket: "webapplication-2a95c.appspot.com",
+    messagingSenderId: "156223554218",
+    appId: "1:156223554218:web:142f0145a3fcf4634146d3",
+    measurementId: "G-LKLBPM68E5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+        
+       <script src="./adminviewallstudentpublication.js"></script>
+  
+
+</body>
+</html>
